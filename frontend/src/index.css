@@ -1,0 +1,21 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color: white;
+  background-color: #050505;
+}
+
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: block !important; /* This kills the default Vite box that squishes your background */
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}

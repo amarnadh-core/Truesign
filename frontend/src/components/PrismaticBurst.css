@@ -1,0 +1,10 @@
+.prismatic-burst-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -10; /* Forces it behind your text and menus */
+  pointer-events: none; /* Prevents the background from blocking your clicks */
+}
