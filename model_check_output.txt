@@ -1,8 +1,0 @@
-ERROR: Select TensorFlow op(s), included in the given model, is(are) not supported by this interpreter. Make sure you apply/link the Flex delegate before inference. For the Android, it can be resolved by adding "org.tensorflow:tensorflow-lite-select-tf-ops" dependency. See instructions: https://www.tensorflow.org/lite/guide/ops_selectNode number 0 (FlexTensorListReserve) failed to prepare.
-Traceback (most recent call last):
-  File "D:\mini project\final\check_model_info.py", line 10, in <module>
-    interpreter.allocate_tensors()
-  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\tensorflow\lite\python\interpreter.py", line 554, in allocate_tensors
-    return self._interpreter.AllocateTensors()
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-RuntimeError: Select TensorFlow op(s), included in the given model, is(are) not supported by this interpreter. Make sure you apply/link the Flex delegate before inference. For the Android, it can be resolved by adding "org.tensorflow:tensorflow-lite-select-tf-ops" dependency. See instructions: https://www.tensorflow.org/lite/guide/ops_selectNode number 0 (FlexTensorListReserve) failed to prepare.
