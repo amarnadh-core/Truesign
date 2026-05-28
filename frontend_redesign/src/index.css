@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@700&display=swap');
+
+:root {
+  --bg-dark: #070707;
+  --text-main: #ffffff;
+  --text-dim: #888888;
+  --accent: #2FFF4E; /* Vivid Neon Green Accent */
+  --accent-glow: rgba(47, 255, 78, 0.15);
+  --border-light: rgba(255, 255, 255, 0.15);
+  --glow-primary: rgba(255, 255, 255, 0.4);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: var(--text-main);
+  background-color: var(--bg-dark);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes panBackground {
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(-20px, -20px); }
+  100% { transform: translate(0, 0); }
+}
+
+@keyframes pulseGlow {
+  0% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.1); }
+  100% { opacity: 0.3; transform: scale(1); }
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: var(--bg-dark);
+}
+
+/* Base dot layer */
+.ambient-layer {
+  position: fixed;
+  top: -50px;
+  left: -50px;
+  right: -50px;
+  bottom: -50px;
+  z-index: -2;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 32px 32px;
+  animation: panBackground 30s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* Massive Glowing Orb for Accent Color */
+.ambient-glow {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60vw;
+  height: 60vw;
+  max-width: 800px;
+  max-height: 800px;
+  background: radial-gradient(circle, var(--accent-glow) 0%, transparent 60%);
+  z-index: -1;
+  pointer-events: none;
+  animation: pulseGlow 8s ease-in-out infinite alternate;
+  border-radius: 50%;
+  filter: blur(80px);
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Typography */
+.hero-text {
+  font-family: 'Syncopate', sans-serif;
+  font-size: clamp(3rem, 10vw, 8rem);
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+  color: var(--text-main);
+  text-shadow: 0 0 60px rgba(47, 255, 78, 0.3); /* Accent glow on text */
+}
+
+.sub-text {
+  font-size: clamp(1rem, 2vw, 1.4rem);
+  font-weight: 300;
+  color: var(--text-dim);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  max-width: 600px;
+}
+
+/* Responsive Grid Utility Class */
+.responsive-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  width: 100%;
+}
+@media (min-width: 900px) {
+  .responsive-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+  }
+}
+
+/* Animations */
+@keyframes fadeY {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeY {
+  animation: fadeY 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Hover Utility */
+.hover-glow {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.hover-glow:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 40px var(--accent-glow);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* Hide scrollbar */
+::-webkit-scrollbar {
+  display: none;
+}

@@ -1,0 +1,8 @@
+TFLITE_EXISTS: True
+TFLITE_SIZE: 577712 bytes
+TFLITE_ERROR: Select TensorFlow op(s), included in the given model, is(are) not supported by this interpreter. Make sure you apply/link the Flex delegate before inference. For the Android, it can be resolved by adding "org.tensorflow:tensorflow-lite-select-tf-ops" dependency. See instructions: https://www.tensorflow.org/lite/guide/ops_selectNode number 0 (FlexTensorListReserve) failed to prepare.
+TFLITE_STATUS: FAILED
+KERAS_EXISTS: True
+LABELS_COUNT: 25
+LABELS: [np.str_('CLAP'), np.str_('DO_YOU_EAT'), np.str_('GOOD_MORNING'), np.str_('GOOD_NIGHT'), np.str_('HELLO'), np.str_('HI'), np.str_('HOW_ARE_YOU'), np.str_('I_AM_FINE'), np.str_('I_AM_HAPPY'), np.str_('I_AM_SAD'), np.str_('I_AM_SICK'), np.str_('I_HAVE_DOUBT'), np.str_('MY_HOME_ADDRESS_IS'), np.str_('MY_NAME_IS'), np.str_('NO'), np.str_('PLEASE'), np.str_('SORRY'), np.str_('THANK_YOU'), np.str_('WELCOME'), np.str_('WHAT'), np.str_('WHEN'), np.str_('WHICH'), np.str_('WHO'), np.str_('WHY'), np.str_('YES')]
+SCRIPT_DONE
