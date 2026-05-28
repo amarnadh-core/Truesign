@@ -17,3 +17,4 @@ venv.bak/
 htmlcov/
 .DS_Store
 *.log
+frontend/
